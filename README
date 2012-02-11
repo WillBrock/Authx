@@ -1,0 +1,9 @@
+The Authx library was built to start new CodeIgniter applications fast without having to deal with a login system. Authx provides numerous configuration settings that allow you to specify what type of authentication system you need for the current site. This was built to satisfy the two main applications that people build. The first type of application is something like a Facebook, amazon, etc. where users are encouraged to sign up and make the process very simple for a user to sign up. The second type of application is for things like internal business applications where more security precautions may be needed like enforcing strong passwords.
+
+When you deploy your app to the public it is advised that you change the defaults and modify and/or delete some of the code that suits your apps needs.
+
+There are numerous methods that can be used but for the purpose of the actual authentication things like register, forgot password, login, delete account the default methods in the controller are more than enough. On the other hand there are many methods that are provided that are very useful for a bunch of different things like usage throughout the regular site or different admin options.
+
+All the methods are called with $this->authx->theMethod(), even the model methods are called like this. After the main authentication stuff you might want to just load the model and in that case you will call those methods with $this->authx_model->theMethod().
+
+This library can be easily modified to slim it down to suit your applications specific needs. Most of the main authentication methods like login, register, confirm registration, forgot password, reset password and delete account can be moved to a controller with a few changes.
